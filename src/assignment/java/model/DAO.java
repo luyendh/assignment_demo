@@ -26,7 +26,7 @@ public class DAO {
     public static Connection getConnection() throws SQLException{
         String connectionString = CONNECTION_STRING_PREFIX + HOST_WITH_PORT + DATABASE + DATABASE_USER + DATABASE_PASSWORD;
         System.out.println(connectionString);
-        Connection conn = DriverManager.getConnection(connectionString);
+        Connection conn = DriverManager.getConnection(connectionString);      
         return conn;
     }
 }
