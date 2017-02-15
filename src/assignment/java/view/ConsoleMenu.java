@@ -5,6 +5,7 @@
  */
 package assignment.java.view;
 
+import assignment.java.utility.ScannerUtil;
 import java.util.Scanner;
 
 /**
@@ -39,7 +40,7 @@ public class ConsoleMenu {
             System.out.println("|        6. Exit             |");
             System.out.println("==============================");
             System.out.print("Nhập lựa chọn của bạn: ");
-            choice = new Scanner(System.in).nextInt();
+            choice = ScannerUtil.getInt();
 
             // Switch construct
             switch (choice) {
