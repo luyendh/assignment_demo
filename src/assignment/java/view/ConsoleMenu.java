@@ -5,6 +5,7 @@
  */
 package assignment.java.view;
 
+import assignment.java.model.UserModel;
 import assignment.java.utility.ScannerUtil;
 import java.util.Scanner;
 
@@ -49,6 +50,7 @@ public class ConsoleMenu {
                     break;
                 case 2:
                     System.out.println("Thêm mới sinh viên.");
+                    UserModel.insert();
                     break;
                 case 3:
                     System.out.println("Sửa thông tin sinh viên.");
