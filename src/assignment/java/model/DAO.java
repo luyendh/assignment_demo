@@ -7,9 +7,7 @@ package assignment.java.model;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 
 /**
  *
@@ -24,9 +22,8 @@ public class DAO {
     private static final String HOST_WITH_PORT = "//localhost:3306/";  
     
     public static Connection getConnection() throws SQLException{
-        String connectionString = CONNECTION_STRING_PREFIX + HOST_WITH_PORT + DATABASE + DATABASE_USER + DATABASE_PASSWORD;
-        System.out.println(connectionString);
-        Connection conn = DriverManager.getConnection(connectionString);      
+        String connectionString = CONNECTION_STRING_PREFIX + HOST_WITH_PORT + DATABASE + DATABASE_USER + DATABASE_PASSWORD;        
+        Connection conn = DriverManager.getConnection(connectionString);            
         return conn;
     }
 }

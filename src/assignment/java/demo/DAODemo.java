@@ -6,9 +6,12 @@
 package assignment.java.demo;
 
 import assignment.java.model.DAO;
+import com.sun.org.apache.xerces.internal.impl.xs.SchemaGrammar;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 
 /**
  *
@@ -57,6 +60,33 @@ public class DAODemo {
        
     }
     public static void main(String[] args) throws SQLException {
-        DAO.getConnection();
+        getList();
+    }
+    
+    public static void insert() throws SQLException{
+        String sql;
+        String id = "2";
+        String name = "Ho Dong";
+        sql = "INSERT INTO users (id,name) VALUES ('"+id+"','"+name+"');";
+        Connection conn = DAO.getConnection();
+        
+        Statement statement = conn.createStatement();
+        statement.execute(sql);
+        System.out.println("Inserted successfully!");
+    }
+    
+    public static void getList() throws SQLException{
+        Connection conn = DAO.getConnection();
+        Statement statement = conn.createStatement();
+        String sql;
+        sql = "SELECT * FROM users;";
+        ResultSet result = statement.executeQuery(sql);
+        
+        while(result.next()){
+            String id = result.getString("id");
+            String name = result.getString("name");
+            System.out.println("id : " + id + "; name : " + name );
+        }
+        
     }
 }

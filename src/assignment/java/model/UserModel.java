@@ -5,6 +5,7 @@
  */
 package assignment.java.model;
 
+import java.sql.SQLException;
 import java.sql.Statement;
 
 /**
@@ -12,23 +13,25 @@ import java.sql.Statement;
  * @author daolinh
  */
 public class UserModel {
-    
-    public static void insert(){
-        try {                      
+
+    public static void insert(User user) {
+        try {
             Statement statement = DAO.getConnection().createStatement();
-            String sqlString = "Insert into users values(1, 'Xuan Hung')";
-            statement.execute(sqlString);
-        } catch (Exception e) {            
+            statement.execute("Insert into users values('" + user.getId() + "', '" + user.getName() + "')");
+        } catch (SQLException e) {
+            e.printStackTrace();
             System.err.println("Lỗi khi insert.");
-        }        
+        }
     }
-    
-    public  void update(){
+
+    public void list() {
+
     }
-    
-    public  void delete(){
+
+    public void update() {
     }
-    
-    public  void getList(){
+
+    public void delete() {
     }
+
 }
