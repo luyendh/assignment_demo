@@ -5,6 +5,7 @@
  */
 package assignment.java.model;
 
+import assignment.java.entity.User;
 import java.sql.SQLException;
 import java.sql.Statement;
 

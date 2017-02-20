@@ -5,7 +5,7 @@
  */
 package assignment.java.controller;
 
-import assignment.java.model.User;
+import assignment.java.entity.User;
 import assignment.java.model.UserModel;
 import assignment.java.utility.ScannerUtil;
 

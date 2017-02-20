@@ -5,6 +5,8 @@
  */
 package assignment.java.model;
 
+import assignment.java.entity.User;
+
 /**
  *
  * @author daolinh

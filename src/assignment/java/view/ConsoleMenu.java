@@ -5,11 +5,9 @@
  */
 package assignment.java.view;
 
-import assignment.java.controller.UserController;
-import assignment.java.model.User;
-import assignment.java.model.UserModel;
+import assignment.java.controller.ProductController;
+import assignment.java.model.ProductModel;
 import assignment.java.utility.ScannerUtil;
-import java.util.Scanner;
 
 /**
  *
@@ -49,9 +47,10 @@ public class ConsoleMenu {
             switch (choice) {
                 case 1:
                     System.out.println("Hiển thị danh sách sinh viên.");
+                    ProductController.getList();
                     break;
                 case 2:
-                    UserController.processInsert();
+                    ProductController.processInsert();
                     break;
                 case 3:
                     System.out.println("Sửa thông tin sinh viên.");
